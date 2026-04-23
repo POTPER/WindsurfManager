@@ -1,0 +1,26 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nicklasmoeller/tauri-v2-schema/refs/heads/main/schema.json",
+  "productName": "WindsurfManager",
+  "version": "2.0.0",
+  "identifier": "com.chao.windsurf-manager",
+  "build": {
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:5173",
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Windsurf Manager",
+        "width": 1100,
+        "height": 750,
+        "resizable": true,
+        "fullscreen": false
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'"
+    }
+  }
+}
